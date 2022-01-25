@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  clean-api:
+    image: clean-api:latest
+    build: .
+    ports:
+      - 5000:5000
