@@ -4,7 +4,7 @@ import re
 clean_blueprint = Blueprint('clean_module', __name__)
 
 def clean(text):
-  return re.sub(r'=/(^|\s)euh($|\s|.|\!)/g', '', text)
+  return re.sub(r'(^|\s)euh($|\s)', '', text)
 
 @clean_blueprint.route('/clean/<text>', methods=['GET'])
 def clean_text_from_get(text):
