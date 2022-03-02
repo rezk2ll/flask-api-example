@@ -10,4 +10,8 @@ app.register_blueprint(clean_blueprint)
 def main():
   return 'use a GET /clean/<text> or POST /clean'
 
+@app.route('/rania')
+def rania():
+  return "Hello"
+
 app.run(host='0.0.0.0')
